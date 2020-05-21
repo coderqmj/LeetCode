@@ -1,25 +1,33 @@
-var reverse=function(x) {
-  // console.log(x);
-  var rev = 0;
-  while (x != 0) {
-      var pop = x % 10;
-      console.log(x);
-      x/=10
-      parseInt(x)
-      // Math.floor(())
-
-      
-      // if (rev > INT_MAX/10 || (rev == INT_MAX / 10 && pop > 7)) return 0;
-      // if (rev < INT_MIN/10 || (rev == INT_MIN / 10 && pop < -8)) return 0;
-      rev = rev * 10 + pop;
+// // 范围：Number.MIN_VALUE -- Number>MAX_VALUE
+var reverse = function (x) {
+  let result = 0, remainder = 0;
+  let MIN_VALUE = Math.pow(-2, 31)
+  let MAX_VALUE = Math.pow(2, 31)
+  if (x > 0) {
+    while (x) {
+      remainder = x % 10;
+      x = Math.floor(x / 10);
+      result = result * 10 + remainder;
+    }
+    if (result > MAX_VALUE || result < MIN_VALUE) {
+      return 0
+    } else {
+      return result
+    }
+  } else {
+    x = -x
+    while (x) {
+      remainder = x % 10;
+      x = Math.floor(x / 10);
+      result = result * 10 + remainder;
+    }
+    if (result > MAX_VALUE || result < MIN_VALUE) {
+      return 0
+    } else {
+      return -result
+    }
   }
-  // return rev;
-  console.log(rev);
 }
-// var x = 123
-// console.log(reverse(x));
-reverse(123)
-var x =123
-x=x/10
-console.log(Math.floor(x));
-console.log(Math.floor(3/2));
+
+console.log(reverse(123))
+// console.log(321 >2147483648)
