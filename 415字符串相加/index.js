@@ -3,39 +3,23 @@
  * @param {string} num2
  * @return {string}
  */
-/**
- * @param {string} num1
- * @param {string} num2
- * @return {string}
- */
+
 var addStrings = function (num1, num2) {
-  let result = Array(Math.max(num1.length, num2.length)).fill(0)
-  num1 = num1.split('')
-  num2 = num2.split('')
-  let i = num1.length - 1;
-  let j = num2.length - 1;
-  while (i >= 0 && j >= 0) {
-    if ((num1[i] + num2[j]) < 10) {
-      result[i] = result[i] + num1[i] + num2[j]
-    } else {
-      result[i] = (num1[i] + num2[j]) - 10
-      result[i - 1]++;
-
-    }
-    j--;
-    i--;
+  while(num1.length > num2.length){
+    num2 = '0'+num2
   }
-
-  if (i === -1) {
-    for (let k = 0; k < j + 1; k++) {
-      result[k] = num2[k]
-    }
-  } else if (j === -1) {
-    for (let k = 0; k < j + 1; k++) {
-      result[k] = num2[k]
-    }
+  while(num1.length < num2.length){
+    num1 = '0'+num1
   }
+  let res = '';
+  let up = 0;
+  for(let i=num1.length -1;i>=0;i--){
+    const sum = +num1[i]+ +num2[i] + up;
+    res = sum%10 + res
+    up = sum>9? 1:0
+  }
+  return up>0? '1'+res : res;
 
-  return result
 };
+console.log(addStrings('1234','789'))
 
