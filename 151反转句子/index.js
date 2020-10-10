@@ -4,8 +4,6 @@
  */
 var reverseWords = function(s) {
   let arr = s.split(' ')
-
-  
   arr.reverse()
   for(let i=0;i<arr.length;i++) {
     if(arr[i]==="") {
@@ -17,5 +15,5 @@ var reverseWords = function(s) {
   return arr.join(' ')
 };
 
-console.log(reverseWords("a good   example"))
+console.log(reverseWords("a good   example!"))
 
