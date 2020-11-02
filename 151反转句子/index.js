@@ -13,7 +13,7 @@ var reverseWords = function(s) {
   }
   console.log(arr)
   return arr.join(' ')
-};
+}; 
 
 console.log(reverseWords("a good   example!"))
 
