@@ -22,4 +22,4 @@ var longestPalindrome = function (s) {
 
   return s.substring(start,start+maxLength)
 };
-console.log(longestPalindrome('cbbd'))
+console.log(longestPalindrome("babad"))

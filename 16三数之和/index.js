@@ -3,7 +3,6 @@ var threeSumClosest = function (nums) {
   nums.sort(function (a, b) {
     return a - b
   })
-  // console.log(nums)
   for (let i = 0; i < nums.length - 2; i++) {
     if (i === 0 || nums[i] !== nums[i - 1]) {
       let start = i + 1, end = nums.length - 1

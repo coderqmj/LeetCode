@@ -3,12 +3,15 @@
  * @return {string[]}
  */
 var letterCombinations = function(digits) {
-  let nums = []
-  nums[0] = nums[1] = ''
-  nums[2] = 'abc'
-  nums[3] = 'def'
-  nums[4] = 'ghi'
-  nums[5] = 'jkl'
-  nums[6] = 'mno'
-  nums
+  let KEY = {
+    '2': ['a', 'b', 'c'],
+    '3': ['d', 'e', 'f'],
+    '4': ['g', 'h', 'i'],
+    '5': ['j', 'k', 'l'],
+    '6': ['m', 'n', 'o'],
+    '7': ['p', 'q', 'r', 's'],
+    '8': ['t', 'u', 'v'],
+    '9': ['w', 'x', 'y', 'z']
+  }
+  
 };
