@@ -23,3 +23,4 @@ var addStrings = function (num1, num2) {
 };
 console.log(addStrings('1234','789'))
 
+console.log(typeof(''+10), typeof(10+''))
