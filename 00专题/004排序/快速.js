@@ -1,5 +1,5 @@
 function quickSort(arr) {
-  if(arr.length === 1) return arr;
+  if(arr.length === 0) return arr;
   let left = [];
   let right = [];
   let currentItem = arr.splice(0,1);
