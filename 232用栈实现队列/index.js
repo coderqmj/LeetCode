@@ -1,6 +1,7 @@
 /**
  * Initialize your data structure here.
  * @date 2021/02/26 13:58
+ * @description 两个栈实现队列
  */
 var MyQueue = function() {
   this.queue = [];
