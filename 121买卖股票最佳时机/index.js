@@ -1,6 +1,10 @@
 /**
  * @param {number[]} prices
  * @return {number}
+ * 1.判断当前元素是否为目前最小price
+ * 2.如果当前价格大于记录的最小price，就计算收益
+ * 3.如果当前价格小于最小price，那就记录下来，然后去后面找收益
+ * 4.时间复杂度O(n)
  */
 var maxProfit = function(prices) {
   let max = 0;
