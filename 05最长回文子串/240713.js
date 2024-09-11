@@ -8,7 +8,6 @@
  */
 var longestPalindrome = function (s) {
   if (s.length <= 1) return s;
-
   let maxLen = 1;
   let start = 0;
   function expand(left, right) {

@@ -9,15 +9,16 @@
  * @param {ListNode} head
  * @return {ListNode}
  */
-var reverseList = function(head) {
+var reverseList = function (head) {
   let prve = null;
   let next = null;
   let current = head;
-  while(current !== null) {
+  while (current !== null) {
     next = current.next;
     current.next = prve;
     prve = current;
     current = next;
   }
+  // 因为prev才是current
   return prve;
 };
