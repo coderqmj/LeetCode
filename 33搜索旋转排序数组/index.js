@@ -19,13 +19,13 @@ var search = function (nums, target) {
   while (left <= right) {
     const mid = (left + right) / 2 | 0;
     if (nums[mid] === target) return mid;
-    if (nums[mid] < nums[right]) { // 说明右边一定递增
+    if (nums[mid] < nums[right]) { // 说明mid右边一定递增
       if(target > nums[mid] && target<=nums[right]) {
         left = mid +1;
       } else {
         right = mid -1;
       }
-    } else { // 说明左边一定递增
+    } else { // 说明mid左边一定递增
       if(target>=nums[left] && target<nums[mid]) {
         right = mid -1;
       } else {
