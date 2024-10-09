@@ -58,7 +58,6 @@ function promiseLimit(limit = 2) {
   let exceCount = 0;
   let waitList = [];
   const request = (reqFn) => {
-    console.log("reqFn", String(reqFn()));
     return new Promise((resolve, rejcet) => {
       const newFn = () => {
         reqFn()
@@ -84,7 +83,6 @@ function promiseLimit(limit = 2) {
         exceCount++;
         newFn();
       }
-      // console.log(waitList);
     });
   };
   return request;
